@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTonicx</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/Com-ElitesLogo (1).png">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#050c19] text-white">
+    <header class="flex justify-between text-center py-5">
+        <img src="images/Com-ElitesLogo (1).png" class="lg:w-16 invert lg:mx-8 w-10 mx-8" alt="">
+        <nav id="nav" class="absolute text-2xl -top-full duration-300 w-full flex flex-col items-center text-center bg-[#050c19]
+            md:static md:flex md:flex-row-reverse md:mr-10">
+            <ul class="gap-5 py-5
+            md:flex md:flex-row md:ml-5 md:text-[18px] md:py-1
+            ">
+                <li class="py-3 hover:text-orange-500"><a href="#about">About</a></li>
+                <li class="py-3 hover:text-orange-500"><a href="#timeline">Timeline</a></li>
+                <li class="py-3 hover:text-orange-500"><a href="#events">Events</a></li>
+                <li class="py-3 hover:text-orange-500"><a href="#sponsors">Our Sponsors</a></li>
+                <li class="py-3 hover:text-orange-500"><a href="#organisers">Organisers</a></li>
+                <li class="py-3 hover:text-orange-500"><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+        <div class="menu">
+            <img class="w-8 cursor-pointer mr-5 invert md:hidden" onclick="menu()" src="/images/menu.svg"
+                alt="menu_image">
+        </div>
+    </header>
+    <main class="">
+        <div class="lg:flex lg:flex-row-reverse lg:justify-center lg:items-center lg:gap-16">
+            <div>
+                <div class="flex flex-row justify-center items-center my-8">
+                    <img src="timer.png" alt="timer_image" class="w-56 lg:w-80">
+                </div>
+                <div class="countdown flex flex-row gap-5 items-center justify-center text-center">
+                    <div class="days border-r-2 pr-3">
+                        <span id="days">00</span>
+                        <p>DAYS</p>
+                    </div>
+                    <div class="hours border-r-2 pr-3">
+                        <span id="hours">00</span>
+                        <p>HOURS</p>
+                    </div>
+                    <div class="min border-r-2 pr-3">
+                        <span id="min">00</span>
+                        <p>MIN</p>
+                    </div>
+                    <div class="sec">
+                        <span id="sec">00</span>
+                        <p>SEC</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="my-8 text-center">
+                    <h1 class="py-3 text-4xl lg:text-[50px] lg:text-left">TechTonix</h1>
+                    <p class="lg:text-[20px] text-xl lg:text-left">Organized by Computer Engineering Department
+                        <br>Government Polytechnic,
+                        Nagpur
+                    </p>
+                </div>
+                <div class="button flex flex-col  justify-center items-center py-10 lg:items-start">
+                    <a href="#events">
+                        <button
+                            class="bg-orange-500 p-2 rounded-[25px] px-5 text-white py-3 flex flex-row space-x-2 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500">
+                            <img src="/images/register.svg" alt="register_svg" class="w-8 invert">
+                            <p class="text-xl">Register Now</p>
+                        </button></a>
+                    <Ri:a> </Ri:a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sections -->
+        <div class="sections lg:my-56 my-16 lg:mx-12 lg:mb-0 lg:pb-0" data-aos="fade-up" data-aos-offset="200">
+            <!-- About Section  -->
+            <div id="about" class="mx-5 lg:mb-52 mb-20">
+                <div class="lg:pb-36 pb-8">
+                    <h1 class="absolute py-4 lg:py-8 lg:px-10 text-3xl font-bold lg:text-[90px] ml-6 text-orange-500">
+                        About</h1>
+                    <h1 class="text-4xl opacity-15 lg:text-[150px] font-extrabold">ABOUT US</h1>
+                </div>
+                <div class="lg:flex lg:flex-row-reverse lg:mx-28">
+                    <div class="images_about my-2 flex justify-center items-center lg:my-0">
+                        <img src="images/about.png" alt="about_image" class="w-[250px] mx-8 lg:w-[1800px]">
+                    </div>
+                    <div class="lg:text-[20px] mx-6 text-justify">
+                        <p>Computer Engineering is core branch among other branches. <span
+                                class="text-orange-500">Computer Engineering</span> continually push the capability and
+                            applicability of computer in every industry and every facet of modern life. it embeds
+                            computers in other machines and system, build network to transfer data and develop way to
+                            make computer <span class="text-orange-500">faster, smaller</span> and <span
+                                class="text-color-orange-500">more capable.</span>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline lg:mx-16 pb-10 lg:pb-52" id="timeline" data-aos="fade-up" data-aos-offset="200">
+            <div class="lg:pb-36 pb-8 mx-5">
+                <h1 class="absolute py-4 lg:py-8 lg:px-10 text-3xl font-bold lg:text-[90px] ml-6 text-orange-500">
+                    Timeline</h1>
+                <h1 class="text-4xl opacity-15 lg:text-[150px] font-extrabold">TIMELINE</h1>
+            </div>
+            <div class="lg:mx-52 mx-5">
+                <div>
+                    <h1 class="text-2xl text-center font-bold opacity-65">18 MARCH, 2024</h1>
+                </div>
+                <div class="timeline border-l-4 border-gray-200 mx-10 my-5">
+                    <div class="relative">
+                        <!-- Event 1 -->
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Inauguration">
+                            <div class="absolute -top-1 -left-1"></div>
+                        </div>
+                        <div class="mx-10">
+                            <span>TIME: 10.30 A.M. to 11.30 A.M.</span>
+                            <h1 class="text-2xl text-orange-500">Inauguration</h1>
+                        </div>
+                    </div>
+
+
+                    <div class="relative">
+                        <!-- Event 2 -->
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Registration">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <div class="mx-10">
+                            <span><br> TIME: 11.30 A.M. to 12.00 P.M.</span>
+                            <h1 class="text-2xl text-orange-500">Registration</h1>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <!-- Event 2 -->
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Technical Events">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <div class="mx-10">
+                            <span><br> TIME: 12.00 P.M. to 1.30 P.M.</span>
+                            <h1 class="text-2xl text-orange-500">Technical Events :</h1>
+                            <h3 class="text-2xl text-white">Opportunity Odyssey (Round 1) </h3>
+                            <h3 class="text-2xl text-white">TechXplore (Round 1) </h3>
+                            <h1 class="text-2xl text-orange-500">Non-Technical Events :</h1>
+                            <h3 class="text-2xl text-white">TreasureHunt (Round 1) </h3>
+                            <h3 class="text-2xl text-white">Bollywood Carnival (Round 1) </h3>
+                            <h3 class="text-2xl text-white">E-Sport (Round 1) </h3>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <!-- Event 4 break -->
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Break">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <div class="mx-10">
+                            <span><br> TIME: 1.45 P.M. to 2.15 P.M.</span>
+                            <h1 class="text-2xl text-orange-500">Break</h1>
+                            <h1 class="text-2xl text-orange-500">Mock Parliament (Round 1)</h1>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="relative">
+                        <!-- Event 5 -->
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Technical Events">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <div class="mx-10">
+                            <span><br> TIME: 2.30 P.M. to 4.30 P.M.</span>
+
+                            <h1 class="text-2xl text-orange-500">Technical Events :</h1>
+                            <h3 class="text-2xl text-white">Opportunity Odessey (Round 2)</h3>
+
+                            <h1 class="text-2xl text-orange-500">Non-Technical Events :</h1>
+                            <h3 class="text-2xl text-white">TreasureHunt (Round 2)</h3>
+                            <h3 class="text-2xl text-white">Bollywood Carnival (Round 2)</h3>
+                            <h3 class="text-2xl text-white">E-Sport (Round 2)</h3>
+                            <br>
+                        </div>
+
+                        <div class="relative">
+                            <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                                title="Closing Day">
+                                <div class="absolute -top-1 -left-1 animate-ping"></div>
+                            </div>
+                            <div class="mx-10">
+                                <span><br> TIME: 5.00 P.M</span>
+                                <h1 class="text-2xl text-orange-500">Closing of Day 1</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <h1 class="text-2xl text-center font-bold opacity-65">19 MARCH, 2024</h1>
+                </div>
+                <div data-aos="fade-up" data-aos-offset="200" class="timeline border-l-4 border-gray-200 mx-10 my-5 ">
+                    <div class="relative">
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Technical Events" title="Event 1">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <div class="mx-10">
+                            <span>TIME: 10.00 am to 1.00 pm</span>
+                            <br>
+
+                            <h1 class="text-2xl text-orange-500">Technical Events :</h1>
+                            <h3 class="text-2xl text-white">Opportunity Odyssey (Final Round)</h3>
+                            <h3 class="text-2xl text-white">TechXplore (Final Round)</h3>
+                            <h3 class="text-2xl text-white">Mock Parliament (Final Round) </h3>
+
+
+                            <h1 class="text-2xl text-orange-500">Non-Technical Events :</h1>
+                            <h3 class="text-2xl text-white">TreasureHunt (Final Round)</h3>
+                            <h3 class="text-2xl text-white">Bollywood Carnival (Final Round)</h3>
+                            <h3 class="text-2xl text-white">E-Sport (Final Round)</h3>
+
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Break & Judgment Of Finalist">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <!-- Finalist -->
+                        <div class="mx-10">
+                            <span><br> TIME: 1.00 P.M. to 2.30 P.M.</span>
+                            <h1 class="text-2xl text-orange-500">Break & Judgment Of Finalist</h1>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Prize Distributon & Closing Ceremony">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <!-- Closing Ceremony -->
+                        <div class="mx-10">
+                            <span><br> TIME: 3.00 P.M. to 4.00 P.M.</span>
+                            <h1 class="text-2xl text-orange-500"> Prize Distributon & Closing Ceremony</h1>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-orange-500"
+                            title="Closing Of TechTonicx 2024">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <!-- Closing Ceremony -->
+                        <div class="mx-10">
+                            <span><br> TIME: 5.00 P.M.</span>
+                            <h1 class="text-2xl text-orange-500">Closing Of TechTonicx 2024</h1>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div data-aos="fade-up" data-aos-offset="200"> 
+                    <h1 class="text-2xl text-center font-bold opacity-65">20 MARCH, 2024</h1>
+                 </div>
+                <div data-aos="fade-up" data-aos-offset="200" class="timeline border-l-4 border-gray-200 mx-10 my-5">
+                    <div class="relative">
+                        <div class="dot absolute top-5 -left-3.5 bg-orange-500 h-6 w-6 rounded-full border-4 border-white"
+                            title="Event 1">
+                            <div class="absolute -top-1 -left-1 animate-ping"></div>
+                        </div>
+                        <div class="mx-10">
+                            <span>TIME</span>
+                            <h1 class="text-2xl text-orange-500">Event Name</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias expedita, tempora
+                                ipsam corrupti aperiam aspernatur illo repellendus? Officia reiciendis ipsa ea
+                                accusamus molestias distinctio</p>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+        </div>
+
+
+
+        <!-- Event Section  -->
+        <div id="events" class="mx-5 lg:mb-52 mb-20 lg:mx-16" data-aos="fade-up" data-aos-offset="200">
+            <div class="lg:pb-36">
+                <h1 class="absolute py-4 lg:py-8 lg:px-10 text-3xl font-bold lg:text-[90px] ml-6 text-orange-500">
+                    Events</h1>
+                <h1 class="text-4xl opacity-15 font-extrabold lg:text-[150px]">OUR EVENTS</h1>
+            </div>
+            <div class="lg:mx-16">
+                <div>
+                    <div class="lg:text-[20px] mx-6 pb-36 lg:gap-5 lg:justify-center lg:items-center">
+                        <!-- Event one  -->
+                        <div class="lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-10">
+                            <div class="flex justify-center items-center pt-20">
+                                <div class="text-white bg-[#141415] w-44 rounded-2xl lg:h-[250px]">
+                                    <div class="justify-center text-center items-center">
+                                        <img src="event_1.png" alt="event_one" class="w-36 p-3 mx-3">
+                                        <p>TechXplore</p>
+                                    </div>
+                                    <div
+                                        class="text-center flex flex-row gap-1 justify-center items-center py-3 hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                        <button onclick="close()" id="open1"
+                                            class="text-center flex flex-row gap-1 justify-center items-center hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                            <p>Register Now</p>
+                                            <img src="arrow-right.svg" alt="arrow_register" class="w-6 invert">
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Dialog Box for Registerration  -->
+                                <div class="text-white bg-[#141415] lg:w-[50%] w-[75%] absolute rounded-2xl hidden lg:mb-52"
+                                    id="modal1">
+                                    <div class="align-top mr-5 flex items-end justify-end mx-3 mt-2 cursor-pointer">
+                                        <button class="" onclick="close()">
+                                            <img src="cross.svg" alt="close_popup" class="invert w-6" id="cross1">
+                                        </button>
+                                    </div>
+                                    <!-- First Event -->
+                                    <div class="flex items-center justify-center">
+                                        <div class="mx-8 py-5">
+                                            <h1 class="text-center text-2xl">TechXplore</h1>
+                                            <h5 class="text-xl pt-5">Details: </h5>
+                                            <p>
+                                                <span class="text-bold">Event head:</span> Nandani Kshirsagar <br>
+                                                Rounds: <br> 1) Tech Throwdown <br>2)Innovation Forge <br>
+
+                                                Round 1:- Tech Throwdown <br>
+                                                In this round ,There will be 3 groups consisting of 3 group members. It
+                                                will
+                                                be buzzer round where questions will be projected on board.In this round
+                                                3
+                                                groups will compete with each other ,the team who will guess more mcqs
+                                                they
+                                                will be qualify for Round 2 <br><br> Round 2:- Innovation Forge
+                                                All the qualified team will be eligible for Round 2.Problem statement
+                                                will
+                                                provided on Day 1 which participant have to elaborate according to their
+                                                preferences .They are allowed to bring resources (PPT,Charts
+                                                ,Diagram)for
+                                                better  explanation.
+                                            </p>
+                                            <div class="flex flex-col justify-center items-center">
+                                                <a href="https://forms.gle/deEfFr1zsTYBU6oA9" target="_blank">
+                                                    <button
+                                                        class="bg-orange-500 px-5 py-1 flex flex-row rounded-xl mt-5 gap-1 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500"
+                                                        onclick="popUp()">
+                                                        <p>Register Now</p>
+                                                        <img src="arrow-right.svg" alt="arrow" class="w-6 invert">
+                                                    </button>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event two  -->
+                            <div class="flex justify-center items-center pt-20">
+                                <div class="text-white bg-[#141415] w-44 rounded-2xl h-64">
+                                    <div class="justify-center text-center items-center">
+                                        <img src="event_2.png" alt="event_one" class="w-48 p-3 mx-3">
+                                        <p>Opportunity <br> Odessey</p>
+                                    </div>
+                                    <div
+                                        class="text-center flex flex-row gap-1 justify-center items-center py-3 hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+
+                                        <button onclick="close()" id="open2" target="_blank"
+                                            class="text-center flex flex-row gap-1 justify-center items-center hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                            <p>Register Now</p>
+                                            <img src="arrow-right.svg" alt="arrow_register" class="w-6 invert">
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Dialog Box for Registerration  -->
+                                <div class="text-white bg-[#141415] lg:w-[50%] w-[75%] absolute rounded-2xl hidden"
+                                    id="modal2">
+                                    <div class="align-top mr-5 flex items-end justify-end mx-3 mt-2 cursor-pointer">
+                                        <a href="https://forms.gle/Pv4yPs7bzwt461JS9">
+                                            <button class="" onclick="close()" target="_blank">
+                                                <img src="cross.svg" alt="close_popup" class="invert w-6" id="cross2">
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="mx-8 py-5">
+                                            <h1 class="text-center text-2xl">Opportunity Odessey</h1>
+                                            <h5 class="text-xl pt-5">Details: </h5>
+                                            <p>Event Head : Vaishnavi Hemke <br>
+                                                The event will be divided into two parts: <br>
+                                                1. Beginner <br> 2. Advanced <br>Rounds: <br> 1) Aptitude Test
+                                                <br> 2) Code Debugging <br>Round 1: Aptitude test: This round will be
+                                                MCQ
+                                                based which will be based on simple aptitude questions. There will be
+                                                total
+                                                15 questions out of which any 9 should be correct. Time limit for
+                                                solving
+                                                will be 15 minutes. <br>
+                                                <br>Round 2: Coding debug: This round will be about debugging a given
+                                                set of
+                                                codes and writing it again according to them what will be the right code
+                                                in
+                                                20 minutes.
+                                                <br><br>Round 3: Placement round: In this round the selected
+                                                participants
+                                                will be facing and answering the challenging questions asked by the
+                                                experts
+                                                present on the judging panel. These questions will be based on their
+                                                knowledge about any subject, their way of communication, and honestly to
+                                                the
+                                                point answering.
+                                            </p>
+                                            <div class="flex flex-col justify-center items-center">
+                                                <a href="https://forms.gle/Pv4yPs7bzwt461JS9" target="_blank">
+                                                    <button
+                                                        class="bg-orange-500 px-5 py-1 flex flex-row rounded-xl mt-5 gap-1 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500"
+                                                        onclick="popUp()">
+                                                        <p>Register Now</p>
+                                                        <img src="arrow-right.svg" alt="arrow" class="w-6 invert">
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event Three  -->
+                            <div class="flex justify-center items-center pt-20">
+                                <div class="text-white bg-[#141415] w-44 rounded-2xl lg:h-[250px]">
+                                    <div class="justify-center text-center items-center">
+                                        <img src="event_3.png" alt="event_one" class="w-36 p-3 mx-3">
+                                        <p>Youth Parliament </p>
+                                    </div>
+                                    <div
+                                        class="text-center flex flex-row gap-1 justify-center items-center py-3 hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                        <button onclick="close()" id="open3"
+                                            class="text-center flex flex-row gap-1 justify-center items-center hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                            <p>Register Now</p>
+                                            <img src="arrow-right.svg" alt="arrow_register" class="w-6 invert">
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Dialog Box for Registerration  -->
+                                <div class="text-white bg-[#141415] lg:w-[50%] w-[75%] absolute rounded-2xl hidden"
+                                    id="modal3">
+                                    <div class="align-top mr-5 flex items-end justify-end mx-3 mt-2 cursor-pointer">
+                                        <button class="" onclick="close()">
+                                            <img src="cross.svg" alt="close_popup" class="invert w-6" id="cross3">
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="mx-8 py-5">
+                                            <h1 class="text-center text-2xl">Youth Parliament </h1>
+                                            <h5 class="text-xl pt-5">Details: </h5>
+                                            <p>Event Head : Dhanshree Gedam <br> Rounds: <br>1) Debate Competition(Day
+                                                -1)
+                                                <br> 2) Mock Parliament(Day - 2) <br> Round 1:- Debate Competition <br>
+                                                Participants will be divided into teams. (number of teams will vary
+                                                according to the intake of participants.) Each team will consist of 10
+                                                members(may vary) and they would be given a topic to debate upon. Teams
+                                                will
+                                                be given a preparatory time of half an hour(1/2 hour). The best debaters
+                                                in
+                                                the respective teams will be qualified for round 2. <br> <br> Round 2:-
+                                                Mock
+                                                Parliament <br> Participants qualified in the first round will be given
+                                                a
+                                                topic on the very first day to prepare. There would be only 2 main teams
+                                                (1
+                                                opposition and 1 in favour). Participants will be divided into teams on
+                                                time
+                                                and on a fair basis. Participants from both the teams engage in
+                                                arguments,
+                                                questions, rebuttals and presentation of predetermined topics which must
+                                                be
+                                                backed by facts. The best 2 students from each team will be the
+                                                winners.(total =4)
+                                            </p>
+                                            <div class="flex flex-col justify-center items-center">
+                                                <a href="https://forms.gle/MJNUf9K13xxRrn3e8" target="_blank">
+                                                    <button
+                                                        class="bg-orange-500 px-5 py-1 flex flex-row rounded-xl mt-5 gap-1 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500"
+                                                        onclick="popUp()">
+                                                        <p>Register Now</p>
+                                                        <img src="arrow-right.svg" alt="arrow" class="w-6 invert">
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-10">
+                            <!-- Event four  -->
+                            <div class="flex justify-center items-center pt-20">
+                                <div class="text-white bg-[#141415] w-44 rounded-2xl lg:h-[250px]">
+                                    <div class="justify-center text-center items-center">
+                                        <img src="event_4.png" alt="event_one" class="w-36 p-3 mx-3">
+                                        <p>Bollywood <br> Carnival </p>
+                                    </div>
+                                    <div
+                                        class="text-center flex flex-row gap-1 justify-center items-center py-3 hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                        <button onclick="close()" id="open4"
+                                            class="text-center flex flex-row gap-1 justify-center items-center hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                            <p>Register Now</p>
+                                            <img src="arrow-right.svg" alt="arrow_register" class="w-6 invert">
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Dialog Box for Registerration  -->
+                                <div class="text-white bg-[#141415] lg:w-[50%] w-[75%] absolute rounded-2xl hidden mb-[500px] lg:mb-0"
+                                    id="modal4">
+                                    <div class="align-top mr-5 flex items-end justify-end mx-3 mt-2 cursor-pointer">
+                                        <button class="" onclick="close()">
+                                            <img src="cross.svg" alt="close_popup" class="invert w-6" id="cross4">
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="mx-8 py-5">
+                                            <h1 class="text-center text-2xl">Bollywood carnival </h1>
+                                            <h5 class="text-xl pt-5">Details: </h5>
+                                            <p>Event Head : Sujal Gayakwad <br> Rounds: <br>1) Emojis War <br> 2)
+                                                Whisper
+                                                Challenge <br> 3) Face Guesstimate <br> Round 1:- Emojis War <br> In
+                                                this
+                                                Round we will allow one plyer of a team to choose one option from the
+                                                given
+                                                set of options.Then the selected option will contain the emojis which
+                                                will
+                                                contain a movie name and then the player will explain the movie name to
+                                                group members by acting.
+                                                The time limit for this round will be 1 minute.
+                                                The team which will guess more movies will be qualified for te second
+                                                round.
+                                            </p>
+                                            <br> Round 2:- Whisper Challenge <br> In this round, the qualified team will
+                                            be
+                                            performing the task in which one player of team will wear headphones and the
+                                            songs will start playing loudly. Then the team members will explain the
+                                            dialogue
+                                            by lip-syncing.
+                                            The time limit for this round will be 1 minute.
+                                            The team which will guess more dialogues will be qualified for te second
+                                            round.
+                                            </p>
+                                            <br> Round 3:- Face Guesstimate <br> Here, bollywood movie characters will
+                                            be
+                                            shown in pairs and team members have to guess max number of movies.
+                                            The time limit will be 45 seconds.
+                                            The team that guesses the maximum number of movies will be the winner of
+                                            "Bollywood Carnival".</p>
+                                            <div class="flex flex-col justify-center items-center">
+                                                <a href="https://forms.gle/cwSSgJKW5xcCeHpU6" target="_blank">
+                                                    <button
+                                                        class="bg-orange-500 px-5 py-1 flex flex-row rounded-xl mt-5 gap-1 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500"
+                                                        onclick="popUp()">
+                                                        <p>Register Now</p>
+                                                        <img src="arrow-right.svg" alt="arrow" class="w-6 invert">
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event five  -->
+                            <div class="flex justify-center items-center pt-20">
+                                <div class="text-white bg-[#141415] w-44 rounded-2xl lg:h-[250px]">
+                                    <div class="justify-center text-center items-center">
+                                        <img src="event_5.png" alt="event_one" class="w-32 p-3 mx-3">
+                                        <p>E-Sports</p>
+                                    </div>
+                                    <div
+                                        class="text-center flex flex-row gap-1 justify-center items-center py-3 hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                        <button onclick="close()" id="open5"
+                                            class="text-center flex flex-row gap-1 justify-center items-center hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                            <p>Register Now</p>
+                                            <img src="arrow-right.svg" alt="arrow_register" class="w-6 invert">
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Dialog Box for Registerration  -->
+                                <div class="text-white bg-[#141415] lg:w-[50%] w-[75%] absolute rounded-2xl hidden"
+                                    id="modal5">
+                                    <div class="align-top mr-5 flex items-end justify-end mx-3 mt-2 cursor-pointer">
+                                        <button class="" onclick="close()">
+                                            <img src="cross.svg" alt="close_popup" class="invert w-6" id="cross5">
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="mx-8 py-5">
+                                            <h1 class="text-center text-2xl">E-Sports</h1>
+                                            <h5 class="text-xl pt-5">Details: </h5>
+                                            <p>Event Head:- Jayash Garad<br> Description: <br>First three rounds will be
+                                                consist of Battel Royal. And after matches will be conducted between top
+                                                teams of Battle Royale match through the clash squad mode. Entry fee per
+                                                squad is 120/- only. If you want to register your squad more times you
+                                                will
+                                                need same amount of re-registration. Win exciting cash prizes with
+                                                certificates.</p>
+                                            <div class="flex flex-col justify-center items-center">
+                                                <a href="https://forms.gle/guB7vrraTRjQjo2LA" target="_blank">
+                                                    <button
+                                                        class="bg-orange-500 px-5 py-1 flex flex-row rounded-xl mt-5 gap-1 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500"
+                                                        onclick="popUp()">
+                                                        <p>Register Now</p>
+                                                        <img src="arrow-right.svg" alt="arrow" class="w-6 invert">
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event six  -->
+                            <div class="flex justify-center items-center pt-20">
+                                <div class="text-white bg-[#141415] w-44 rounded-2xl lg:h-[250px]">
+                                    <div class="justify-center text-center items-center">
+                                        <img src="event_6.png" alt="event_one" class="w-36 p-3 mx-3">
+                                        <p>Treasure Hunt</p>
+                                    </div>
+                                    <div
+                                        class="text-center flex flex-row gap-1 justify-center items-center py-3 hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                        <button onclick="close()" id="open6"
+                                            class="text-center flex flex-row gap-1 justify-center items-center hover:gap-2 hover:duration-300 cursor-pointer text-sm">
+                                            <p>Register Now</p>
+                                            <img src="arrow-right.svg" alt="arrow_register" class="w-6 invert">
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Dialog Box for Registerration  -->
+                                <div class="text-white bg-[#141415] lg:w-[50%] w-[75%] absolute rounded-2xl hidden mb-[800px] lg:mb-0 "
+                                    id="modal6">
+                                    <div class="align-top mr-5 flex items-end justify-end mx-3 mt-2 cursor-pointer">
+                                        <button class="" onclick="close()">
+                                            <img src="cross.svg" alt="close_popup" class="invert w-6" id="cross6">
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="mx-8 py-5">
+                                            <h1 class="text-center text-2xl">Treasure Hunt</h1>
+                                            <h5 class="text-xl pt-5">Details: </h5>
+                                            <p>Event Head:- Vishesh Thool<br>Round 1: <br>A treasure hunt involves teams
+                                                or
+                                                individuals searching for clues or hidden objects across various
+                                                locations
+                                                on class, department and campus. It has been structured with three
+                                                rounds,
+                                                each with its own games and levels.Throughout the game, teams or
+                                                individuals
+                                                earn points based on how quickly they solve the clues and complete the
+                                                challenges. The team or individual with the highest score or fastest
+                                                time at
+                                                the end of the event is declared the winner of the treasure hunt.
+                                            </p>
+                                            <br>Round 2: <br>The second round of game will involve a dark room where
+                                            alphabets will be hidden. Each member of the group has to pick a chit, in
+                                            which
+                                            words will be written. Turn by turn the members has to go inside the dark
+                                            room
+                                            and find the letters of the word written in their chit. The team who
+                                            collects
+                                            more letters similar to their word given will be qualified for the final
+                                            round.
+                                            </p>
+                                            <br>Round 2: <br>In round three, each team will be given a chit written
+                                            clues,
+                                            the team has to decode the clue and find the next chit for next clue. This
+                                            will
+                                            be continued till the last clue chit that is fourth clue chit, in which the
+                                            clue
+                                            for the treasure will be given. The team who first finds the treasure (which
+                                            will be common for all the teams) will be declared the winner of the game
+                                            and
+                                            will be awarded.
+                                            </p>
+                                            <div class="flex flex-col justify-center items-center">
+                                                <a href="https://forms.gle/26n6RweiLyW1vXaD7" target="_blank">
+                                                    <button
+                                                        class="bg-orange-500 px-5 py-1 flex flex-row rounded-xl mt-5 gap-1 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500"
+                                                        onclick="popUp()">
+                                                        <p>Register Now</p>
+                                                        <img src="arrow-right.svg" alt="arrow" class="w-6 invert">
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sponsors Section  -->
+                <div id="sponsors" class="mx-5 lg:mb-52 mb-20 lg:mt-64">
+                    <div class="lg:pb-36 pb-8">
+                        <h1
+                            class="absolute py-4 lg:py-8 lg:px-10 text-3xl font-bold lg:text-[90px] ml-6 text-orange-500">
+                            Sponsors</h1>
+                        <h1 class="text-4xl opacity-15 font-extrabold lg:text-[100px]">OUR SPONSORS</h1>
+                    </div>
+                    <div class="lg:mx-16">
+                        <div class="lg:text-[20px] mx-6" data-aos="fade-up" data-aos-offset="200">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas! Lorem ipsum dolor
+                                sit
+                                amet consectetur, adipisicing elit. Explicabo tempore nemo, iste omnis maxime neque
+                                exercitationem quasi, quos optio quidem amet, reiciendis iusto officia nihil rerum
+                                dolores
+                                saepe laudantium. Quibusdam delectus <br> eligendi corporis doloremque fugiat vel, nisi
+                                est
+                                tempora inventore magni deleniti itaque at quis nihil dolorum quod maxime nam recusandae
+                                praesentium cupiditate? Possimus atque vero, aliquid unde nobis assumenda fugit corporis
+                                quo
+                                quae numquam distinctio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizers Section  -->
+                <div id="organisers" class="mx-5 lg:mb-52 mb-20 lg:mt-56">
+                    <div class="lg:pb-36 pb-8">
+                        <h1
+                            class="absolute py-4 lg:py-8 lg:px-10 text-3xl font-bold lg:text-[90px] ml-6 text-orange-500">
+                            Organizers</h1>
+                        <h1 class="text-4xl opacity-15 font-extrabold lg:text-[100px]">OUR ORGANIZERS</h1>
+                    </div>
+                    <div class="lg:mx-0">
+                        <div class="lg:text-[20px] mx-6">
+                            <div class="lg:flex space-y-5 my-5 lg:gap-5 lg:space-y-0">
+                                <div class="bg-[#141415] px-5 py-3 lg:w-[35%]">
+                                    <h1 class="text-3xl text-orange-500">Dr.M.B.Daigavane</h1>
+                                    <h3 class="font-bold">Principal</h3>
+                                    <h6 class="opacity-50">Goverment Polytechnic,Nagpur.</h6>
+                                </div>
+                                <div class="bg-[#141415] px-5 py-3 lg:w-[35%]">
+                                    <h1 class="text-3xl text-orange-500">Dr.M.V.Sarode</h1>
+                                    <h3 class="font-bold">HOD
+                                        Computer Engineering</h3>
+                                    <h6 class="opacity-50">Goverment Polytechnic,Nagpur.</h6>
+                                </div>
+                                <div class="bg-[#141415] px-5 py-3 lg:w-[35%]">
+                                    <h1 class="text-3xl text-orange-500">Mr.A.A.UIKE</h1>
+                                    <h3 class="font-bold">Co-ordinator TechTonicx</h3>
+                                    <h6 class="opacity-50">Goverment Polytechnic,Nagpur.</h6>
+                                </div>
+                            </div>
+                            <div class="lg:flex space-y-1 my-5 lg:gap-5 lg:space-y-0 lg:justify-center lg:items-center">
+                                <div class="bg-[#141415] px-5 py-3 lg:w-[30%]">
+                                    <h1 class="text-3xl text-orange-500">Daksh.R.Titarmare</h1>
+                                    <h3 class="font-bold">President</h3>
+                                    <h6 class="opacity-50">TechTonicx</h6>
+                                </div>
+                                <div class="bg-[#141415] px-5 py-3 lg:w-[30%]">
+                                    <h1 class="text-3xl text-orange-500">Prerana Ghaghre</h1>
+                                    <h3 class="font-bold">Vice-President</h3>
+                                    <h6 class="opacity-50">TechTonicx</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Section  -->
+                <div id="gallery" class="mx-5 lg:mb-40 mb-20">
+                    <div class="lg:pb-36 pb-8">
+                        <h1
+                            class="absolute py-4 lg:py-8 lg:px-10 text-3xl font-bold lg:text-[90px] ml-6 text-orange-500">
+                            Gallery</h1>
+                        <h1 class="text-4xl opacity-15 font-extrabold lg:text-[100px]">OUR GALLERY</h1>
+                    </div>
+                    <div class="lg:mx-16">
+                        <div class="mx-6 mt-6">
+                            <!-- Slideshow container -->
+                            <div class="slideshow-container relative m-auto">
+
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_1.JPG" class="rounded-2xl">
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_2.JPG" class="rounded-2xl">
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_3.JPG" class="rounded-2xl ">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_4.JPG" class="rounded-2xl ">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_5.JPG" class="rounded-2xl ">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_6.JPG" class="rounded-2xl ">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_7.JPG" class="rounded-2xl ">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_8.JPG" class="rounded-2xl ">
+                                </div>
+                                <div class="mySlides fade">
+                                    <img src="gallery/img_9.JPG" class="rounded-2xl ">
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swags Section  -->
+                <!-- <div id="swags" class="mx-5 lg:mb-52 mb-20" data-aos="fade-up" data-aos-offset="200">
+                    <div class="lg:pb-36 pb-8">
+                        <h1
+                            class="absolute py-4 lg:py-8 lg:px-10 text-3xl font-bold lg:text-[90px] ml-6 text-orange-500">
+                            Swags</h1>
+                        <h1 class="text-4xl opacity-15 font-extrabold lg:text-[150px]">OUR SWAGS</h1>
+                    </div>
+                    <div class="lg:mx-16"> -->
+                <!-- <div class="lg:text-[20px] mx-6" data-aos="fade-up" data-aos-offset="200">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas! Lorem ipsum dolor
+                                sit
+                                amet consectetur, adipisicing elit. Explicabo tempore nemo, iste omnis maxime neque
+                                exercitationem quasi, quos optio quidem amet, reiciendis iusto officia nihil rerum
+                                dolores
+                                saepe laudantium. Quibusdam delectus <br> eligendi corporis doloremque fugiat vel, nisi
+                                est
+                                tempora inventore magni deleniti itaque at quis nihil dolorum quod maxime nam recusandae
+                                praesentium cupiditate? Possimus atque vero, aliquid unde nobis assumenda fugit corporis
+                                quo
+                                quae numquam distinctio
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+    </main>
+
+    <footer class="lg:flex lg:flex-row lg:justify-between lg:items-center lg:mx-28" data-aos="fade-up"
+        data-aos-offset="200">
+        <div>
+            <div class="text-center my-8">
+                <div
+                    class="lg:flex lg:justify-center lg:items-center lg:flex-row lg:gap-5 lg:py-3 flex flex-col justify-cener items-center">
+                    <img src="images/Com-ElitesLogo (1).png" class="lg:w-16 invert w-20" alt="Com-ElitesLogo">
+                    <h1 class="py-3 text-4xl lg:text-[50px]">TechTonix</h1>
+                </div>
+                <p class="lg:text-[20px] text-xl">Organized by Computer Engineering Department <br>Government
+                    Polytechnic, Nagpur</p>
+            </div>
+            <div class="button flex flex-col items-center">
+                <a href="#events">
+                    <button
+                        class="bg-orange-500 p-2 rounded-[25px] px-5 text-white py-3 flex flex-row space-x-2 hover:bg-[#050c19] shadow-2xl outline outline-orange-500 duration-500 border-orange-500">
+                        <img src="/images/register.svg" alt="register_svg" class="w-8 invert">
+                        <p class="text-xl">Register Now</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="text-center items-center my-10 text-3xl text-orange-500">
+            <ul class="space-y-3 text-xl">
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#organisers">Organisers</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="items-center justify-center flex flex-col gap-5">
+            <div class="flex flex-row space-x-5">
+                <a href="https://discord.gg/EkcQ6gp3" target="_blank">
+                    <img src="/images/discord.svg" alt="discord_svg" class="lg:w-20 invert w-16">
+                </a>
+                <a href="https://www.instagram.com/gpn_computer?igsh=MWRqdWduZHU0YjgwMQ==" target="_blank">
+                    <img src="/images/instagram.svg" alt="instagram_svg" class="lg:w-20 invert w-16">
+                </a>
+            </div>
+            <div class="flex flex-row space-x-5">
+                <img src="/images/linkedin.svg" alt="linkedin" class="lg:w-20 invert w-16">
+                <a href="mailto:gpncomputerengg@gmail.com">
+                    <img src="/images/gmail.svg" alt="gmail" class="lg:w-20 invert w-16">
+                </a>
+            </div>
+        </div>
+
+    </footer>
+    <div class="flex justify-center items-center mt-5">
+        <p>2024 &copy; Copyright</p>
+    </div>
+</body>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    console.log("Welcome to the Techtonicx !")
+
+    let nav = document.getElementById('nav')
+    let dayE1 = document.getElementById('days')
+    let hourE1 = document.getElementById('hours')
+    let minE1 = document.getElementById('min')
+    let secE1 = document.getElementById('sec')
+
+    function menu() {
+        nav.classList.toggle('top-12')
+    }
+
+    //Add zero if number is smaller than 10
+    function countDown() {
+        const countDownDate = new Date('Mar 18, 2024 10:00:00').getTime()
+
+        let x = setInterval(function () {
+            let now = new Date().getTime()
+            let distance = countDownDate - now;
+            let days = format(Math.floor(distance / (1000 * 60 * 60 * 24)))
+            let hours = format(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
+            let minutes = format(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
+            let seconds = format(Math.floor((distance % (1000 * 60)) / 1000))
+
+            dayE1.innerHTML = days;
+            hourE1.innerHTML = hours;
+            minE1.innerHTML = minutes;
+            secE1.innerHTML = seconds;
+
+            if (distance < 0) {
+                dayE1.innerHTML = "00";
+                hourE1.innerHTML = "00";
+                minE1.innerHTML = "00";
+                secE1.innerHTML = "00";
+            }
+        }, 1000)
+    }
+
+    function format(number) {
+        if (number < 10) {
+            return '0' + number
+        }
+        return number
+    }
+
+    //Running the function
+    countDown()
+
+    console.log("Hello")
+
+    // For Event 1
+    document.getElementById('open1').addEventListener("click", () => {
+        document.getElementById('modal1').classList.remove('hidden')
+    })
+    document.getElementById('cross1').addEventListener("click", () => {
+        document.getElementById('modal1').classList.add('hidden')
+    })
+
+    // For Event 2
+    document.getElementById('open2').addEventListener("click", () => {
+        document.getElementById('modal2').classList.remove('hidden')
+    })
+    document.getElementById('cross2').addEventListener("click", () => {
+        document.getElementById('modal2').classList.add('hidden')
+    })
+
+    // For Event 3
+    document.getElementById('open3').addEventListener("click", () => {
+        document.getElementById('modal3').classList.remove('hidden')
+    })
+    document.getElementById('cross3').addEventListener("click", () => {
+        document.getElementById('modal3').classList.add('hidden')
+    })
+
+    // For Event 4
+    document.getElementById('open4').addEventListener("click", () => {
+        document.getElementById('modal4').classList.remove('hidden')
+    })
+    document.getElementById('cross4').addEventListener("click", () => {
+        document.getElementById('modal4').classList.add('hidden')
+    })
+
+    // For Event 5
+    document.getElementById('open5').addEventListener("click", () => {
+        document.getElementById('modal5').classList.remove('hidden')
+    })
+    document.getElementById('cross5').addEventListener("click", () => {
+        document.getElementById('modal5').classList.add('hidden')
+    })
+
+    // For Event 6
+    document.getElementById('open6').addEventListener("click", () => {
+        document.getElementById('modal6').classList.remove('hidden')
+    })
+    document.getElementById('cross6').addEventListener("click", () => {
+        document.getElementById('modal6').classList.add('hidden')
+    })
+
+</script>
+
+</html>
